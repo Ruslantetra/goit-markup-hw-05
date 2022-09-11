@@ -302,12 +302,9 @@ p {
 .li-container {
     width: 370px;
     margin-right: 30px;
-    margin-bottom: 30px;   
+    margin-bottom: 30px;
 }
 
-.li-container:hover {
-    box-shadow:  1px 4px 6px rgba(29, 3, 3, 0.16),  0px 4px 4px rgba(0, 0, 0, 0.06),  0px 1px 1px rgba(0, 0, 0, 0.12);   
-}
 
 .li-container:nth-child(3n) {
     margin-right: 0;
@@ -318,7 +315,15 @@ p {
 }
 
 .link {
+    display: block;
     text-decoration: none;
+
+    transition: box-shadow var(--animation);
+}
+
+.link:hover,
+.link:focus {
+    box-shadow:  1px 4px 6px rgba(29, 3, 3, 0.16),  0px 4px 4px rgba(0, 0, 0, 0.06),  0px 1px 1px rgba(0, 0, 0, 0.12); 
 }
 
 .img-container {
@@ -346,8 +351,8 @@ p {
     
 }
 
-.li-container:hover .overlay,
-.li-container:focus .overlay {
+.link:hover .overlay,
+.link:focus .overlay {
     transform: translateY(0);
 }
 
